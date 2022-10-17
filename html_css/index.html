@@ -16,15 +16,15 @@
                     <div>
                         <label for="categoryId">Id</label>
                         <p></p>
-                        <input type="text" name="categoryId" id="categoryId">
+                        <input type="number" name="categoryId" id="categoryId">
                     </div>
                     <div>
                         <label for="categoryName">Name</label>
-                        <input type="text" name="categoryName" id="categoryName">
+                        <input type="text" name="categoryName" id="categoryName" maxlength="45">
                     </div>
                     <div>
                         <label for="categoryDescription">Description</label>
-                        <input type="text" name="categoryDescription" id="categoryDescription">
+                        <input type="text" name="categoryDescription" id="categoryDescription" maxlength="250">
                     </div>
 
                     <div class="form_action--button">
@@ -36,9 +36,9 @@
                     <table class="list" id="categoryList">
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Description</th>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>DESCRIPTION</th>
                             </tr>
                         </thead>
                         <tbody>

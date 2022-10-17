@@ -16,19 +16,19 @@
                     <div>
                         <label for="messageId">Id</label>
                         <p></p>
-                        <input type="text" name="messageId" id="messageId">
+                        <input type="number" name="messageId" id="messageId">
                     </div>
                     <div>
                         <label for="messageText">MessageText</label>
-                        <input type="text" name="messageText" id="messageText">
+                        <input type="text" name="messageText" id="messageText" maxlength="250">
                     </div>
                     <div>
                         <label for="messageClientId">ClientId</label>
-                        <input type="text" name="messageClientId" id="messageClientId">
+                        <input type="number" name="messageClientId" id="messageClientId">
                     </div>
                     <div>
                         <label for="messageOrtopedicId">OrtopedicId</label>
-                        <input type="text" name="messageOrtopedicId" id="messageOrtopedicId">
+                        <input type="number" name="messageOrtopedicId" id="messageOrtopedicId">
                     </div>
 
                     <div class="form_action--button">
@@ -40,10 +40,10 @@
                     <table class="list" id="messageList">
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>MessageText</th>
-                                <th>ClientId</th>
-                                <th>OrtopedicId</th>
+                                <th>ID</th>
+                                <th>MESSAGE TEXT</th>
+                                <th>ORTOPEDIC ID</th>
+                                <th>CLIENT ID</th>                                
                             </tr>
                         </thead>
                         <tbody>

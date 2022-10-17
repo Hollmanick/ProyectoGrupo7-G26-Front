@@ -16,11 +16,11 @@
                     <div>
                         <label for="clientId">Id</label>
                         <p></p>
-                        <input type="text" name="clientId" id="clientId">
+                        <input type="number" name="clientId" id="clientId">
                     </div>
                     <div>
                         <label for="clientName">Name</label>
-                        <input type="text" name="clientName" id="clientName">
+                        <input type="text" name="clientName" id="clientName" maxlength="250">
                     </div>
                     <div>
                         <label for="clientEmail">Email</label>
@@ -28,11 +28,11 @@
                     </div>
                     <div>
                         <label for="clientAge">Age</label>
-                        <input type="text" name="clientAge" id="clientAge">
+                        <input type="number" name="clientAge" id="clientAge" maxlength="3">
                     </div>
                     <div>
                         <label for="clientPassword">Password</label>
-                        <input type="text" name="clientPassword" id="clientPassword">
+                        <input type="text" name="clientPassword" id="clientPassword" maxlength="45">
                     </div>
 
                     <div class="form_action--button">
@@ -44,11 +44,11 @@
                     <table class="list" id="clientList">
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Age</th>
-                                <th>Password</th>
+                                <th>ID</th>                                
+                                <th>EMAIL</th>
+                                <th>PASSWORD</th>
+                                <th>NAME</th>
+                                <th>AGE</th>                                
                             </tr>
                         </thead>
                         <tbody>
