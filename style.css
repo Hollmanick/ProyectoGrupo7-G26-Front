@@ -76,3 +76,15 @@ button:hover, input[type="submit"]:hover{
     width: 100%;
     color: #eee;
 }
+
+.titlePage2{    
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.5px;
+    border: 3px solid rgb(10, 101, 187);    
+    text-align: center;
+}
+
+.titlePage3{    
+    background-color: rgb(10, 101, 187);
+    text-align: center;
+}

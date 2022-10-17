@@ -7,11 +7,42 @@
 
 <body>
     <h1 class="titlePage">
-        GESTION CLIENTES
+        CLIENT MANAGEMENT
     </h1>
     <table>
         <tr>
+            <td>    
+                <table>
+                    <thead>
+                        <tr> 
+                            <h2 class="titlePage3">
+                                <a style= color:white>SELECT SECTION</a>
+                            </h2>                                 
+                            <div>
+                                <h4 class="titlePage2">
+                                    <a style= color:black href="client.html">CLIENT MANAGEMENT</a>
+                                </h4>
+                                <h4 class="titlePage2">
+                                    <a style= color:black href="ortopedic.html">ORTOPEDIC MANAGEMENT</a>
+                                </h4>
+                                <h4 class="titlePage2">
+                                    <a style= color:black href="messages.html">MESSAGE MANAGEMENT</a>
+                                </h4>
+                                <h4 class="titlePage2">
+                                    <a style= color:black href="reservation.html">RESERVATION MANAGEMENT</a>
+                                </h4>
+                                <h4 class="titlePage2">
+                                    <a style= color:black href="index.html">CATEGORY MANAGEMENT</a>
+                                </h4>
+                            </div>                                
+                        </tr>
+                    </thead>
+                </table>
+            </td>
             <td>
+                <h2 class="titlePage3">
+                    <a style= color:white>INSERT DATA</a>
+                </h2> 
                 <form autocomplete="off" onsubmit="onClientSubmit()">
                     <div>
                         <label for="clientId">Id</label>
@@ -43,12 +74,15 @@
                 <td>
                     <table class="list" id="clientList">
                         <thead>
-                            <tr>
-                                <th>ID</th>                                
-                                <th>EMAIL</th>
-                                <th>PASSWORD</th>
-                                <th>NAME</th>
-                                <th>AGE</th>                                
+                            <tr style="background-color: rgb(255, 255, 255);">
+                                <h2 class="titlePage3">
+                                    <a style= color:white>REFERENCE BASE</a>
+                                </h2> 
+                                <th style="color: rgb(0,0,0); border: 3px solid rgb(10, 101, 187);">ID</th>                                
+                                <th style="color: rgb(0,0,0); border: 3px solid rgb(10, 101, 187);"></th>>EMAIL</th>
+                                <th style="color: rgb(0,0,0); border: 3px solid rgb(10, 101, 187);"></th>>PASSWORD</th>
+                                <th style="color: rgb(0,0,0); border: 3px solid rgb(10, 101, 187);"></th>>NAME</th>
+                                <th style="color: rgb(0,0,0); border: 3px solid rgb(10, 101, 187);"></th>>AGE</th>                                
                             </tr>
                         </thead>
                         <tbody>
@@ -59,23 +93,6 @@
             </td>
         </tr>
     </table>
-    <div>
-        <h4 class="titlePage">
-            <a href="client.html" style="color: #eee;">GESTION CLIENTES</a>
-        </h4>
-        <h4 class="titlePage">
-            <a href="ortopedic.html" style="color: #eee;">GESTION ORTOPEDIC</a>
-        </h4>
-        <h4 class="titlePage">
-            <a href="messages.html" style="color: #eee;">GESTION MENSAJES</a>
-        </h4>
-        <h4 class="titlePage">
-            <a href="reservation.html" style="color: #eee;">GESTION RESERVACIONES</a>
-        </h4>
-        <h4 class="titlePage">
-            <a href="index.html" style="color: #eee;">GESTION CATEGORY</a>
-        </h4>
-    </div>
     <script type="text/javascript" src="/js/client.js"></script>
 </body>
 </html>
