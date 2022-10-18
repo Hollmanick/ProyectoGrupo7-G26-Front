@@ -1,7 +1,7 @@
 var selectedRow = null
 
-const host = '193.122.151.214';
-//const host = 'localhost';
+//const host = '193.122.151.214';
+const host = 'localhost';
 
 //*******   *******    *******  *******/ 
 //*******    CRUD  CLIENT     *******/ 
@@ -26,7 +26,7 @@ function readFormClientData() {
 }
 
 function createClient(data){
-    const url = `https://${host}:8080/api/Client/save`;
+    const url = `http://${host}:8080/api/Client/save`;
 
     $.ajax({
         url : url,
@@ -54,7 +54,7 @@ function loadClientData(){
     const table = document.getElementById("clientList").getElementsByTagName('tbody')[0];
 
     $.ajax({
-        url : `https://${host}:8080/api/Client/all`,
+        url : `http://${host}:8080/api/Client/all`,
         data : null,
         headers: {  
             'Access-Control-Allow-Origin': true
@@ -107,7 +107,7 @@ function clientSelect(td) {
 
 }
 function clientUpdate() {
-    const url = `https://${host}:8080/api/Client/update`;
+    const url = `http://${host}:8080/api/Client/update`;
     const formData = readFormClientData();
     console.log('formData ->', formData)
     const data = {
@@ -142,7 +142,7 @@ function clientUpdate() {
 //Delete the data
 function clientDelete(td, id) {
     $.ajax({
-        url : `https://${host}:8080/api/Client/${id}`,
+        url : `http://${host}:8080/api/Client/${id}`,
         data : null,
         type : "DELETE", //POST, PUT, DELETE,
         dataType : 'json',

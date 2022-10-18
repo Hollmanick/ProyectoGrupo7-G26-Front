@@ -1,7 +1,7 @@
 var selectedRow = null
 
-const host = '193.122.151.214';
-//const host = 'localhost';
+//const host = '193.122.151.214';
+const host = 'localhost';
 
 //*******   *******    *******  *******/ 
 //*******    CRUD  ORTOPEDIC     *******/ 
@@ -27,7 +27,7 @@ function readFormOrtopedicData() {
 }
 
 function createOrtopedic(data){
-    const url = `https://${host}:8080/api/Ortopedic/save`;
+    const url = `http://${host}:8080/api/Ortopedic/save`;
 
     $.ajax({
         url : url,
@@ -55,7 +55,7 @@ function loadOrtopedicData(){
     const table = document.getElementById("ortopedicList").getElementsByTagName('tbody')[0];
 
     $.ajax({
-        url : `https://${host}:8080/api/Ortopedic/all`,
+        url : `http://${host}:8080/api/Ortopedic/all`,
         data : null,
         headers: {  
             'Access-Control-Allow-Origin': true
@@ -107,7 +107,7 @@ function ortopedicSelect(td) {
     document.getElementById("ortopedicCategory").value = selectedRow.cells[5].innerHTML;
 }
 function ortopedicUpdate() {
-    const url = `https://${host}:8080/api/Ortopedic/update`;
+    const url = `http://${host}:8080/api/Ortopedic/update`;
     const formData = readFormOrtopedicData();
     console.log('formData ->', formData)
     const data = {name: formData.name, brand: formData.brand, year: formData.year, description: formData.description, id: formData.id}
@@ -136,7 +136,7 @@ function ortopedicUpdate() {
 //Delete the data
 function ortopedicDelete(td, id) {
     $.ajax({
-        url : `https://${host}:8080/api/Ortopedic/${id}`,
+        url : `http://${host}:8080/api/Ortopedic/${id}`,
         data : null,
         type : "DELETE", //POST, PUT, DELETE,
         dataType : 'json',

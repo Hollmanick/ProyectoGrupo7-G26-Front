@@ -1,7 +1,7 @@
 var selectedRow = null
 
-const host = '193.122.151.214';
-//const host = 'localhost';
+//const host = '193.122.151.214';
+const host = 'localhost';
 
 //*******   *******    *******  *******/ 
 //*******    CRUD  MESSAGE     *******/ 
@@ -25,7 +25,7 @@ function readFormMessageData() {
 }
 
 function createMessage(data){
-    const url = `https://${host}:8080/api/Message/save`;
+    const url = `http://${host}:8080/api/Message/save`;
 
     $.ajax({
         url : url,
@@ -53,7 +53,7 @@ function loadMessageData(){
     const table = document.getElementById("messageList").getElementsByTagName('tbody')[0];
 
     $.ajax({
-        url : `https://${host}:8080/api/Message/all`,
+        url : `http://${host}:8080/api/Message/all`,
         data : null,
         headers: {  
             'Access-Control-Allow-Origin': true
@@ -100,7 +100,7 @@ function messageSelect(td) {
     document.getElementById("messageOrtopedicId").value = selectedRow.cells[3].innerHTML;
 }
 function messageUpdate() {
-    const url = `https://${host}:8080/api/Message/update`;
+    const url = `http://${host}:8080/api/Message/update`;
     const formData = readFormMessageData();
     console.log('formData ->', formData)
     const data = {
@@ -132,7 +132,7 @@ function messageUpdate() {
 //Delete the data
 function messageDelete(td, id) {
     $.ajax({
-        url : `https://${host}:8080/api/Message/${id}`,
+        url : `http://${host}:8080/api/Message/${id}`,
         data : null,
         type : "DELETE", //POST, PUT, DELETE,
         dataType : 'json',
