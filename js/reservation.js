@@ -26,7 +26,7 @@ function readFormReservationData() {
 }
 
 function createReservation(data){
-    const url = `http://${host}:8080/api/Reservation/save`;
+    const url = `https://${host}:8080/api/Reservation/save`;
 
     $.ajax({
         url : url,
@@ -54,7 +54,7 @@ function loadReservationData(){
     const table = document.getElementById("reservationList").getElementsByTagName('tbody')[0];
 
     $.ajax({
-        url : `http://${host}:8080/api/Reservation/all`,
+        url : `https://${host}:8080/api/Reservation/all`,
         data : null,
         headers: {  
             'Access-Control-Allow-Origin': true
@@ -104,7 +104,7 @@ function reservationSelect(td) {
     document.getElementById("reservationOrtopedicId").value = selectedRow.cells[4].innerHTML;
 }
 function reservationUpdate() {
-    const url = `http://${host}:8080/api/Reservation/update`;
+    const url = `https://${host}:8080/api/Reservation/update`;
     const formData = readFormReservationData();
     console.log('formData ->', formData)
     const data = {startDate: formData.startDate, devolutionDate: formData.devolutionDate, id: formData.id}
@@ -133,7 +133,7 @@ function reservationUpdate() {
 //Delete the data
 function reservationDelete(td, id) {
     $.ajax({
-        url : `http://${host}:8080/api/Reservation/${id}`,
+        url : `https://${host}:8080/api/Reservation/${id}`,
         data : null,
         type : "DELETE", //POST, PUT, DELETE,
         dataType : 'json',

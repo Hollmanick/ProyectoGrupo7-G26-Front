@@ -24,7 +24,7 @@ function readFormCategoryData() {
 }
 
 function createCategory(data){
-    const url = `http://${host}:8080/api/Category/save`;
+    const url = `https://${host}:8080/api/Category/save`;
 
     $.ajax({
         url : url,
@@ -52,7 +52,7 @@ function loadCategoryData(){
     const table = document.getElementById("categoryList").getElementsByTagName('tbody')[0];
 
     $.ajax({
-        url : `http://${host}:8080/api/Category/all`,
+        url : `https://${host}:8080/api/Category/all`,
         data : null,
         headers: {  
             'Access-Control-Allow-Origin': true
@@ -96,7 +96,7 @@ function categorySelect(td) {
     document.getElementById("categoryDescription").value = selectedRow.cells[2].innerHTML;
 }
 function categoryUpdate() {
-    const url = `http://${host}:8080/api/Category/update`;
+    const url = `https://${host}:8080/api/Category/update`;
     const formData = readFormCategoryData();
     console.log('formData ->', formData)
     const data = {name: formData.name, description: formData.description, id: formData.id}
@@ -125,7 +125,7 @@ function categoryUpdate() {
 //Delete the data
 function categoryDelete(td, id) {
     $.ajax({
-        url : `http://${host}:8080/api/Category/${id}`,
+        url : `https://${host}:8080/api/Category/${id}`,
         data : null,
         type : "DELETE", //POST, PUT, DELETE,
         dataType : 'json',

@@ -26,7 +26,7 @@ function readFormClientData() {
 }
 
 function createClient(data){
-    const url = `http://${host}:8080/api/Client/save`;
+    const url = `https://${host}:8080/api/Client/save`;
 
     $.ajax({
         url : url,
@@ -54,7 +54,7 @@ function loadClientData(){
     const table = document.getElementById("clientList").getElementsByTagName('tbody')[0];
 
     $.ajax({
-        url : `http://${host}:8080/api/Client/all`,
+        url : `https://${host}:8080/api/Client/all`,
         data : null,
         headers: {  
             'Access-Control-Allow-Origin': true
@@ -107,7 +107,7 @@ function clientSelect(td) {
 
 }
 function clientUpdate() {
-    const url = `http://${host}:8080/api/Client/update`;
+    const url = `https://${host}:8080/api/Client/update`;
     const formData = readFormClientData();
     console.log('formData ->', formData)
     const data = {
@@ -142,7 +142,7 @@ function clientUpdate() {
 //Delete the data
 function clientDelete(td, id) {
     $.ajax({
-        url : `http://${host}:8080/api/Client/${id}`,
+        url : `https://${host}:8080/api/Client/${id}`,
         data : null,
         type : "DELETE", //POST, PUT, DELETE,
         dataType : 'json',
