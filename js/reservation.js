@@ -1,7 +1,7 @@
 var selectedRow = null
 
-//const host = '193.122.151.214';
-const host = 'localhost';
+const host = '193.122.151.214';
+//const host = 'localhost';
 
 //*******   *******    *******  *******/ 
 //*******    CRUD  RESERVATION     *******/ 
